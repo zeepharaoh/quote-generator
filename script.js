@@ -42,17 +42,17 @@ function newQuote() {
 }
 
 // Get Quotes From API
-function getQuote() {
-    loading();	    
-    const proxyUrl = 'https://jacinto-cors-proxy.herokuapp.com/';
-    const apiUrl = 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
-    fetch(proxyUrl + apiUrl)
-    .then(res => res.json())	  
-    .then(data => {	   
-      console.log(data);	
-      })
- .catch(err => {	    
- getQuote();	       
+ async function getQuotes() {
+  loading();
+  const apiUrl = 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
+  try {
+    const response = await fetch(apiUrl);
+    apiQuotes = await response.json();
+    newQuote();
+  } catch (error) {
+    // Catch Error Here
+  }
+}
 // Tweet Quote
 function tweetQuote() {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.innerText} - ${authorText.innerText}`;
