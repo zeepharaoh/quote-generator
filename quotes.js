@@ -1,7 +1,6 @@
 const localQuotes = [
   {
-    text:
-      'Genius is one percent inspiration and ninety-nine percent perspiration.',
+    text: 'Genius is one percent inspiration and ninety-nine percent perspiration.',
     author: 'Thomas Edison',
   },
   {
@@ -265,8 +264,7 @@ const localQuotes = [
     author: 'African proverb',
   },
   {
-    text:
-      'Real magic in relationships means an absence of judgement of others.',
+    text: 'Real magic in relationships means an absence of judgement of others.',
     author: 'Wayne Dyer',
   },
   {
