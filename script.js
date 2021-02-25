@@ -44,7 +44,7 @@ function newQuote() {
 // Get Quotes From API
 async function getQuotes() {
   loading();
-  const apiUrl = 'https://quotes.rest/quote/random?language=en&limit=10000';
+  const apiUrl = 'https://type.fit/api/quotes';
   try {
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
